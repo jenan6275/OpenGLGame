@@ -1,0 +1,1 @@
+cmake -E tar: warning: skipping symbolic link "freeglut-3.8.0/progs/test-shapes-gles1/android_toolchain.cmake" -> "../../android_toolchain.cmake".

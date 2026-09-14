@@ -1,0 +1,4 @@
+adb logcat MainCarAppService:D *:S
+
+
+Google Map API key: AIzaSyBcRAp_oeI73NCkrCixDvXY-SYisMp-Ggk

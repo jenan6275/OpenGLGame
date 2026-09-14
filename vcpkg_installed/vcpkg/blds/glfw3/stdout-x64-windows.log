@@ -1,0 +1,15 @@
+-- Using cached glfw-glfw-3.4.tar.gz
+-- Cleaning sources at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glfw3/src/3.4-2448ff4533.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/Nalini/AppData/Local/vcpkg/downloads/glfw-glfw-3.4.tar.gz
+-- Using source at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glfw3/src/3.4-2448ff4533.clean
+warning: The vcpkg C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg\vcpkg.exe is using detected vcpkg root C:\Users\Nalini\source\repos\Game\vcpkg and ignoring mismatched VCPKG_ROOT environment value C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg. To suppress this message, unset the environment variable or use the --vcpkg-root command line switch.
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows/lib/pkgconfig/glfw3.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Nalini/AppData/Local/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows/debug/lib/pkgconfig/glfw3.pc
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/glfw3_x64-windows/share/glfw3/copyright
+-- Performing post-build validation

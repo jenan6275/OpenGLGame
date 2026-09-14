@@ -1,0 +1,9 @@
+-- Using cached nothings-stb-f75e8d1cad7d90d72ef7a4661f1b994ef78b4e31.tar.gz
+-- Cleaning sources at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/stb/src/4ef78b4e31-bf024d35de.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/Nalini/AppData/Local/vcpkg/downloads/nothings-stb-f75e8d1cad7d90d72ef7a4661f1b994ef78b4e31.tar.gz
+-- Using source at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/stb/src/4ef78b4e31-bf024d35de.clean
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/stb_x64-windows/share/stb/FindStb.cmake
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/stb_x64-windows/share/stb/vcpkg-cmake-wrapper.cmake
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/stb_x64-windows/share/stb/usage
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/stb_x64-windows/share/stb/copyright
+-- Performing post-build validation

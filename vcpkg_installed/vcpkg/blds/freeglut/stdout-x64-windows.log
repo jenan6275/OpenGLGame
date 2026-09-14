@@ -1,0 +1,21 @@
+Downloading https://github.com/FreeGLUTProject/freeglut/archive/v3.8.0.tar.gz -> FreeGLUTProject-freeglut-v3.8.0.tar.gz
+Successfully downloaded FreeGLUTProject-freeglut-v3.8.0.tar.gz
+-- Extracting source C:/Users/Nalini/AppData/Local/vcpkg/downloads/FreeGLUTProject-freeglut-v3.8.0.tar.gz
+-- Applying patch android.patch
+-- Applying patch x11-dependencies-export.patch
+-- Applying patch fix-debug-macro.patch
+-- Applying patch windows-output-name.patch
+-- Using source at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/freeglut/src/v3.8.0-192985c11f.clean
+warning: The vcpkg C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg\vcpkg.exe is using detected vcpkg root C:\Users\Nalini\source\repos\Game\vcpkg and ignoring mismatched VCPKG_ROOT environment value C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg. To suppress this message, unset the environment variable or use the --vcpkg-root command line switch.
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/freeglut_x64-windows/lib/pkgconfig/glut.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/Nalini/AppData/Local/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/freeglut_x64-windows/debug/lib/pkgconfig/glut.pc
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/freeglut_x64-windows/share/glut/vcpkg-cmake-wrapper.cmake
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/freeglut_x64-windows/share/freeglut/usage
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/freeglut_x64-windows/share/freeglut/copyright
+-- Performing post-build validation

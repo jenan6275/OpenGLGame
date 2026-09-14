@@ -1,0 +1,6 @@
+# ninja log v7
+29	653	8061841061274549	CMakeFiles/glew.dir/C_/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glew/src/glew-8cf78e348c.clean/build/glew.rc.res	731afbd135e2afc9
+14	42058	8061841061114617	CMakeFiles/glew.dir/C_/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glew/src/glew-8cf78e348c.clean/src/glew.c.obj	9b29223a1d77d15a
+42059	42613	8061841486001592	bin/glew32.dll	f62695883f411266
+42059	42613	8061841486001592	lib/glew32.lib	f62695883f411266
+42614	42902	8061841487124974	CMakeFiles/install.util	91d9d9c7898f487e

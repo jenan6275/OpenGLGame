@@ -1,0 +1,16 @@
+-- Note: glad only supports static library linkage. Building static library.
+-- Using cached Dav1dde-glad-1ecd45775d96f35170458e6b148eb0708967e402.tar.gz
+-- Cleaning sources at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glad/src/708967e402-274d415499.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/Nalini/AppData/Local/vcpkg/downloads/Dav1dde-glad-1ecd45775d96f35170458e6b148eb0708967e402.tar.gz
+-- Applying patch encoding.patch
+-- Applying patch find_python.patch
+-- Using source at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glad/src/708967e402-274d415499.clean
+-- This version of glad uses the compatibility profile. To use the core profile instead, create an overlay port of this with GLAD_PROFILE set to 'core' or set GLAD_PROFILE to 'core' in a custom triplet.
+-- This recipe is at C:/Users/Nalini/AppData/Local/vcpkg/registries/git-trees/fa93b14c1581057e1d14650f5f15c9b0757dd548
+-- See the overlay ports documentation at https://github.com/microsoft/vcpkg/blob/master/docs/specifications/ports-overlay.md
+warning: The vcpkg C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg\vcpkg.exe is using detected vcpkg root C:\Users\Nalini\source\repos\Game\vcpkg and ignoring mismatched VCPKG_ROOT environment value C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg. To suppress this message, unset the environment variable or use the --vcpkg-root command line switch.
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/glad_x64-windows/share/glad/copyright
+-- Performing post-build validation

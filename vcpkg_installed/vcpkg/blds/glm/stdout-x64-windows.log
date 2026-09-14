@@ -1,0 +1,12 @@
+-- Note: glm only supports static library linkage. Building static library.
+-- Using cached g-truc-glm-1.0.3.tar.gz
+-- Cleaning sources at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glm/src/1.0.3-65552ff9f1.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/Nalini/AppData/Local/vcpkg/downloads/g-truc-glm-1.0.3.tar.gz
+-- Using source at C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/blds/glm/src/1.0.3-65552ff9f1.clean
+warning: The vcpkg C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg\vcpkg.exe is using detected vcpkg root C:\Users\Nalini\source\repos\Game\vcpkg and ignoring mismatched VCPKG_ROOT environment value C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\vcpkg. To suppress this message, unset the environment variable or use the --vcpkg-root command line switch.
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/glm_x64-windows/share/glm/copyright
+-- Installing: C:/Users/Nalini/source/repos/Game/vcpkg_installed/vcpkg/pkgs/glm_x64-windows/share/glm/usage
+-- Performing post-build validation

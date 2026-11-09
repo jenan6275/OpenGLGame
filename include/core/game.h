@@ -49,6 +49,11 @@ GLuint program;
 #define SCR_HEIGHT 800
 
 
+void keyDown(unsigned char key, int x, int y);
+void keyUp(unsigned char key, int x, int y);
+void processInput(unsigned char key);
+
+
 
 
 class Game {

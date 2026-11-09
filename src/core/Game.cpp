@@ -6,7 +6,7 @@
 //#include <GL/glew.h>
 //#include <glad/glad.h>
 #include <glad/glad.h>
-//#include <GLFW/glfw3.h>
+#include <GLFW/glfw3.h>
 #include <GL/freeglut.h>  // or keep <GL/freeglut.h> if using freeglut
 #include <core/game.h>
 
@@ -18,11 +18,18 @@
 
 //#include "core/vgl.h"
 
+bool keys[256] = { false };
+glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+
+float deltaTime = 0.0f;	// time between current frame and last frame
+float lastFrame = 0.0f;
+
 
 
 //using namespace std;
 // Intialized the game and do the OpenGL setup
-
 
 Game::Game()
 {
@@ -47,6 +54,10 @@ Game::Game()
 	model = make_unique<glm::mat4>(1.0f);
 	view = make_unique<glm::mat4>(1.0f);
 	project = make_unique<glm::mat4>(1.0f);
+
+	//glutKeyboardFunc(processInput);
+	glutKeyboardFunc(keyDown);
+	glutKeyboardUpFunc(keyUp);
 	
 
 
@@ -119,7 +130,10 @@ void Game::Init(int argc, char** argv){
 void Game::Model() {
 	static float rot = 0.0f;
 	*model = glm::mat4(1.0f);
-	*model = glm::rotate(*model, glm::radians(rot++), glm::vec3(0.0f, 1.0f, 1.0f));
+	*model = glm::translate(*model, glm::vec3(2.0f, 0.0f, 0.0f));
+	//*model = glm::rotate(*model, glm::radians(rot++), glm::vec3(0.0f, 1.0f, 1.0f));
+
+
 	shader->setMat4("uModel", *model);
 	Sleep(100);
 
@@ -127,7 +141,17 @@ void Game::Model() {
 void Game::View() {
 
 	*view = glm::mat4(1.0f);
-	*view = glm::translate(*view, glm::vec3(0.0f, 0.0f, -4.0f));
+	//*view = glm::translate(*view, glm::vec3(0.0f, 0.0f, -4.0f));
+
+	const float radius = 10.0f;
+	float camX = static_cast<float>(sin(glutGet(GLUT_ELAPSED_TIME) /1000.0f ) * radius);
+	float camZ = static_cast<float>(cos(glutGet(GLUT_ELAPSED_TIME) / 1000.0f ) * radius);
+
+	/**view = glm::lookAt(glm::vec3(camX, 0.0, camZ),
+						glm::vec3(0.0, 0.0, 0.0),
+						glm::vec3(0.0, 1.0, 0.0));*/
+
+	*view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 	shader->setMat4("uView", *view);
 
 }
@@ -171,6 +195,7 @@ void Game::Update(){
 	Model();
 	View();
 	Project();
+
 
 	//float timeD = glutGet(GLUT_ELAPSED_TIME);
 	//float greenValue = (sin(timeD) / 2.0f) + 0.5f;
@@ -223,6 +248,53 @@ void Game::Render(){
 void Game::Stop(){
 
 }
+
+
+
+void keyDown(unsigned char key, int x, int y)
+{
+	keys[key] = true;
+
+	if (key == 27) // ESC
+		exit(0);
+
+	processInput(key);
+}
+
+void keyUp(unsigned char key, int x, int y)
+{
+	keys[key] = false;
+}
+
+void processInput(unsigned char key)
+{
+	float currentFrame = static_cast<float>(glutGet(GLUT_ELAPSED_TIME) / 1000.0f);
+	deltaTime = currentFrame - lastFrame;
+	lastFrame = currentFrame;
+
+	float cameraSpeed = static_cast<float>(2.5 * deltaTime);
+	// WASD
+	if (keys['w'] || keys['W'])
+		cameraPos += cameraSpeed * cameraFront;
+
+	if (keys['s'] || keys['S'])
+		cameraPos -= cameraSpeed * cameraFront;
+
+	if (keys['a'] || keys['A'])
+		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+
+	if (keys['d'] || keys['D'])
+		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+
+
+	if (key == 27) // ESC key
+	{
+		glutLeaveMainLoop();
+	}
+
+
+}
+
 
 // Fake C API
 extern "C" {

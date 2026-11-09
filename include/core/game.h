@@ -6,11 +6,21 @@
 //#include "core/game.h"
 
 //#include <GL/glew.h>
+
 //#include <glad/glad.h>
 
-#include "graphics/VAO.h"
-#include "graphics/VBO.h"
-#include "graphics/EBO.h"
+
+
+#include <graphics/VAO.h>
+#include <graphics/VBO.h>
+#include <graphics/EBO.h>
+#include <core/Texture.h>
+#include <graphics/Shader.h>
+#include <core/ModelData.h>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 using namespace std;
 
@@ -19,7 +29,7 @@ using namespace std;
 //class EBO;
 
 
-#include <graphics/Shader.h>
+
 #include <memory>
 // This class connatinet all the funmcil;aity to set up the openGL for rendering
 
@@ -35,7 +45,9 @@ GLuint IndxBuffers[NumIndx];
 //int timeD;
 GLuint program;
 
-#include "ModelData.h"
+#define SCR_WIDTH 1200
+#define SCR_HEIGHT 800
+
 
 
 
@@ -45,12 +57,22 @@ class Game {
 	unique_ptr<VBO> vbo;
 	unique_ptr<EBO> ebo;
 	unique_ptr<Shader> shader;
+	unique_ptr<Texture_Cls> tex0;
+	unique_ptr<Texture_Cls> tex1;
+	//GLFWwindow* window;
 
+	unique_ptr<glm::mat4> model;
+	unique_ptr<glm::mat4> view;
+	unique_ptr<glm::mat4> project;
+	
 
 public:	
 	Game();
 	static void Init(int , char** );
 	void Update();
+	void Model();
+	void View();
+	void Project();
 	void updateDisplay();
 	void Render();
 	void Stop();

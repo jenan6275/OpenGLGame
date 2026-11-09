@@ -1,9 +1,10 @@
 #pragma once
 //#include <glad/glad.h>
-#include <GL/glew.h>
+//#include <GL/glew.h>
 
-#include "VBO.h"
-#include "EBO.h"
+#include <graphics/VAO.h>
+#include <graphics/VBO.h>
+#include <graphics/EBO.h>
 
 class VAO
 {

@@ -114,13 +114,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\Nalini\source\repos\Game\include;C:\Users\Nalini\source\repos\Game\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Nalini Jena\source\repos\Game\include;C:\Users\Nalini Jena\source\repos\Game\vcpkg_installed\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Nalini\source\repos\Game\vcpkg_installed\x64-windows\debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freeglutd.lib;glew32d.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Nalini Jena\source\repos\Game\vcpkg_installed\x64-windows\debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;freeglutd.lib;glew32d.lib;glfw3dll.lib;glad.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClCompile Include="src\core\Game.cpp" />
     <ClCompile Include="src\core\inputmgr.cpp" />
+    <ClCompile Include="src\core\Texture.cpp" />
     <ClCompile Include="src\graphics\EBO.cpp" />
     <ClCompile Include="src\graphics\Shader.cpp" />
     <ClCompile Include="src\graphics\Display.cpp" />
@@ -158,18 +159,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\game.h" />
+    <ClInclude Include="include\core\glad.h" />
     <ClInclude Include="include\core\ModelData.h" />
+    <ClInclude Include="include\core\stb_image.h" />
+    <ClInclude Include="include\core\Texture.h" />
     <ClInclude Include="include\core\vgl.h" />
     <ClInclude Include="include\graphics\Display.h" />
     <ClInclude Include="include\graphics\EBO.h" />
     <ClInclude Include="include\graphics\Shader.h" />
     <ClInclude Include="include\graphics\VAO.h" />
     <ClInclude Include="include\graphics\VBO.h" />
+    <ClInclude Include="vcpkg_installed\x64-windows\include\glad\glad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\triangles.frag" />
     <None Include="assets\shaders\triangles.vert" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\images\awesomeface.png" />
+    <Image Include="assets\images\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

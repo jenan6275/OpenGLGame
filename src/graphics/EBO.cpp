@@ -1,5 +1,5 @@
 #pragma once
-#include "graphics/EBO.h"
+#include <graphics/EBO.h>
 
 EBO::EBO(GLuint* indices, GLsizeiptr size)
 {

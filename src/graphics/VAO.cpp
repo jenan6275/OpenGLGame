@@ -1,5 +1,5 @@
 #pragma	once
-#include "graphics/VAO.h"
+#include <graphics/VAO.h>
 
 VAO::VAO()
 {

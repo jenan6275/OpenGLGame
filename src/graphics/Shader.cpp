@@ -1,5 +1,5 @@
 #pragma once
-#include "graphics/Shader.h"
+#include <graphics/Shader.h>
 // Read the file content and return the content string
 std::string get_file_contents(const char* fileName) 
 {
@@ -84,4 +84,22 @@ void Shader::setFloat(std::string str, float value)
 	int loc = glGetUniformLocation(ID, str.c_str());
 	glUniform4f(loc, 0.0f, value, 0.0f, 1.0f);
 	//glUniform4f(loc, value);
+}
+
+void Shader::setInt(std::string str, int value)
+{
+	int loc = glGetUniformLocation(ID, str.c_str());
+	glUniform1i(loc, value);
+}
+
+void Shader::setVec3(std::string str, float x, float y, float z)
+{
+	int loc = glGetUniformLocation(ID, str.c_str());
+	glUniform3f(loc, x, y, z);
+}
+
+void Shader::setMat4(std::string str, glm::mat4 &mat)
+{
+	int loc = glGetUniformLocation(ID, str.c_str());
+	glUniformMatrix4fv(loc, 1, GL_FALSE, &mat[0][0]);
 }

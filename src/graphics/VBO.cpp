@@ -1,5 +1,5 @@
 #pragma once
-#include "graphics/VBO.h"
+#include <graphics/VBO.h>
 
 VBO::VBO(GLfloat* vertices, GLsizeiptr size)
 {
